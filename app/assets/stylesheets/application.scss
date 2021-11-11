@@ -11,3 +11,28 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/container";
+@import "components/banner";
+@import "components/card";
+@import "components/button";
+
+h2 {
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  &:hover {
+    color: white;
+    opacity: 0.8;
+  }
+}
+
+.delete {
+  color: red;
+  &:hover {
+    color: red;
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Create a movie list</h1>
+
+  <%= simple_form_for(@list) do |f| %>
+    <%= f.input :name %><br>
+    <%= f.submit class: "btn-flat"%>
+  <% end %><br>
+
+  <%= link_to "Back to my lists", lists_path, class:"btn-ghost" %>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Create a bookmark</h1>
+
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %><br>
+    <%= f.association :movie %><br>
+    <%= f.submit class: "btn-flat"%>
+  <% end %><br>
+
+  <%= link_to "Back to my lists", lists_path, class:"btn-ghost" %>
+</div>

@@ -1,0 +1,19 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.gannett-cdn.com/-mm-/75f94cbbc5756a3f1c2135ee55d2689771f4045e/c=136-0-2312-1224/local/-/media/2020/03/04/USATODAY/usatsports/MotleyFool-TMOT-7cd24a5a-empty-movie-theater.jpg?width=2176&height=1224&fit=crop&format=pjpg&auto=webp);">
+  <div class="container">
+    <h1>Save all your favorite movies!</h1>
+    <p>Build amazing lists</p>
+  </div>
+</div>
+
+<div class="container">
+  <h2>My lists <span><%= link_to "Create a movie list", new_list_path, class: "btn btn-flat" %></span></h2>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="col-6">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/uhucudm0gkr9nmar38b9.jpg)">
+          <%= link_to list.name, list_path(list) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
