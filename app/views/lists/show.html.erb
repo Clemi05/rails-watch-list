@@ -1,4 +1,5 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.gannett-cdn.com/-mm-/75f94cbbc5756a3f1c2135ee55d2689771f4045e/c=136-0-2312-1224/local/-/media/2020/03/04/USATODAY/usatsports/MotleyFool-TMOT-7cd24a5a-empty-movie-theater.jpg?width=2176&height=1224&fit=crop&format=pjpg&auto=webp);">
+<!-- Banner with the same image as the list -->
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @list.photo.key %>);">
   <div class="container">
     <h1><%= @list.name %></h1>
   </div>

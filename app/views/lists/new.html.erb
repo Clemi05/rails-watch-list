@@ -3,6 +3,7 @@
 
   <%= simple_form_for(@list) do |f| %>
     <%= f.input :name %><br>
+    <%= f.input :photo, as: :file %><br>
     <%= f.submit class: "btn-flat"%>
   <% end %><br>
 

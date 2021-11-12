@@ -1,7 +1,7 @@
 // ALL CSS FOR CARDS
 
-// CARD CATEGORY
-.card-category {
+// CARD LIST
+.card-list {
   background-size: cover;
   background-position: center;
   height: 180px;
@@ -16,6 +16,20 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-bottom: 10px;
 }
+
+.card-list-delete {
+  position: relative;
+}
+
+.card-list-delete i {
+  color: white;
+  position: absolute;
+  right: 16px;
+  top: -32px;
+  width: 5px;
+}
+
+
 
 // CARD BOOKMARK
 .card-bookmark {
