@@ -21,7 +21,9 @@
               <p><%= bookmark.movie.overview %></p>
               <i class="fas fa-quote-left"></i> <small class="flex-grow-1"><%= bookmark.comment %></small>
             </div>
-            <%= link_to "delete", bookmark_path(bookmark), class:"delete", method: :delete, data: { confirm: "Are you sure you want to delete this bookmark?" } %>
+            <%= link_to bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to delete this bookmark?" } do %>
+              <i class="fas fa-trash i-delete"></i>
+            <% end %>
           </div>
         </div>
       </div>

@@ -15,13 +15,18 @@
     <!-- Create a list of cards -->
     <% @lists.each do |list| %>
       <div class="col-6">
-      <!-- Card-list -->
+        <!-- Card-list -->
         <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key %>')">
-          <%= link_to list.name, list_path(list) %>
+          <%= link_to list.name, list_path(list), class:"list-title" %>
         </div>
         <div class="card-list-delete">
           <%= link_to list_path(list), method: :delete, data: { confirm: "Are you sure you want to delete the list: #{list.name}?" } do %>
-            <i class="fas fa-trash"></i>
+            <i class="fas fa-trash i-delete"></i>
+          <% end %>
+        </div>
+        <div class="card-list-add">
+          <%= link_to  new_list_bookmark_path(list) do %>
+            <i class="fas fa-plus i-add"></i>
           <% end %>
         </div>
       </div>
